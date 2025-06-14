@@ -1,0 +1,30 @@
+name: Update Submodules
+
+on:
+  repository_dispatch:
+    types: [submodule-updated]
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          token: ${{ secrets.PAT }}
+      
+      - name: Update submodules
+        run: |
+          git submodule update --remote --recursive
+          git config --global user.name "kakitomeru"
+          git config --global user.email "kakitomeru@github.com"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(submodules): update submodules"
+            git push
+          fi
+ 
