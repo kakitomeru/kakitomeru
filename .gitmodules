@@ -1,0 +1,3 @@
+# [submodule "services/X"]
+# 	path = services/X
+# 	url = git@github.com:kakitomeru/X.git
