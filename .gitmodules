@@ -1,12 +1,15 @@
 [submodule "gateway"]
 	path = gateway
-	url = https://github.com/kakitomeru/gateway
+	url = git@github.com:kakitomeru/gateway.git
 [submodule "auth"]
 	path = auth
-	url = https://github.com/kakitomeru/auth
+	url = git@github.com:kakitomeru/auth.git
 [submodule "snippet"]
 	path = snippet
-	url = https://github.com/kakitomeru/snippet
+	url = git@github.com:kakitomeru/snippet.git
 [submodule "shared"]
 	path = shared
-	url = https://github.com/kakitomeru/shared
+	url = git@github.com:kakitomeru/shared.git
+[submodule "ui"]
+	path = ui
+	url = git@github.com:kakitomeru/ui.git
